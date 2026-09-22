@@ -1,0 +1,26 @@
+name: OR-Library Experiment
+
+on:
+  push:
+    paths:
+      - "experiments/orlib/**"
+      - "scripts/orlib_experiment.py"
+      - "src/llm_binpack/**"
+      - ".github/workflows/orlib-experiment.yml"
+
+jobs:
+  experiment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install -e .
+      - name: Run deterministic vs recorded-LLM experiment
+        run: python scripts/orlib_experiment.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: orlib-binpack1-results
+          path: results/orlib_binpack1_experiment.json

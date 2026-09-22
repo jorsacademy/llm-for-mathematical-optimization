@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-guided-binpack"
+version = "0.1.0"
+description = "LLM-guided program search for interpretable online bin-packing heuristics"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "JORS Academy" }]
+dependencies = []
+
+[project.optional-dependencies]
+openai = ["openai>=1.66.0"]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.scripts]
+llm-binpack = "llm_binpack.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

@@ -1,0 +1,108 @@
+{
+  "protocol": "Frozen heuristic selected before binpack3/binpack4 evaluation. This script performs evaluation only and contains no search or tuning.",
+  "frozen_expression": "(2.0 + tightness) if residual < 0.25 * item else remaining / capacity",
+  "datasets": {
+    "binpack2.txt": {
+      "file": "binpack2.txt",
+      "source_url": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/binpack2.txt",
+      "instances": 20,
+      "items_per_instance": 250,
+      "expression": "(2.0 + tightness) if residual < 0.25 * item else remaining / capacity",
+      "evaluation": {
+        "expression": "(2.0 + tightness) if residual < 0.25 * item else remaining / capacity",
+        "mean_bins": 106.7,
+        "mean_excess": 5.15,
+        "mean_excess_ratio": 0.05066102100802874,
+        "best_fit_wins": 15,
+        "best_fit_ties": 3,
+        "best_fit_losses": 2,
+        "complexity": 22,
+        "fitness": -0.050881021008028736,
+        "mean_reference_gap": 5
+      },
+      "paired_vs_best_fit": {
+        "n": 20,
+        "candidate_mean_bins": 106.7,
+        "baseline_mean_bins": 107.7,
+        "mean_delta_bins": -1,
+        "median_delta_bins": -1,
+        "wins": 15,
+        "ties": 3,
+        "losses": 2,
+        "exact_sign_pvalue": 0.002349853515625,
+        "bootstrap_mean_delta_ci95": [
+          -1.5,
+          -0.45
+        ]
+      }
+    },
+    "binpack3.txt": {
+      "file": "binpack3.txt",
+      "source_url": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/binpack3.txt",
+      "instances": 20,
+      "items_per_instance": 500,
+      "expression": "(2.0 + tightness) if residual < 0.25 * item else remaining / capacity",
+      "evaluation": {
+        "expression": "(2.0 + tightness) if residual < 0.25 * item else remaining / capacity",
+        "mean_bins": 209.7,
+        "mean_excess": 8.5,
+        "mean_excess_ratio": 0.04223869801940117,
+        "best_fit_wins": 18,
+        "best_fit_ties": 2,
+        "best_fit_losses": 0,
+        "complexity": 22,
+        "fitness": -0.04245869801940117,
+        "mean_reference_gap": 8.5
+      },
+      "paired_vs_best_fit": {
+        "n": 20,
+        "candidate_mean_bins": 209.7,
+        "baseline_mean_bins": 212,
+        "mean_delta_bins": -2.3,
+        "median_delta_bins": -2.5,
+        "wins": 18,
+        "ties": 2,
+        "losses": 0,
+        "exact_sign_pvalue": 0.00000762939453125,
+        "bootstrap_mean_delta_ci95": [
+          -2.85,
+          -1.75
+        ]
+      }
+    },
+    "binpack4.txt": {
+      "file": "binpack4.txt",
+      "source_url": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/binpack4.txt",
+      "instances": 20,
+      "items_per_instance": 1000,
+      "expression": "(2.0 + tightness) if residual < 0.25 * item else remaining / capacity",
+      "evaluation": {
+        "expression": "(2.0 + tightness) if residual < 0.25 * item else remaining / capacity",
+        "mean_bins": 415.15,
+        "mean_excess": 14.6,
+        "mean_excess_ratio": 0.03645401390765872,
+        "best_fit_wins": 20,
+        "best_fit_ties": 0,
+        "best_fit_losses": 0,
+        "complexity": 22,
+        "fitness": -0.03667401390765872,
+        "mean_reference_gap": 14.6
+      },
+      "paired_vs_best_fit": {
+        "n": 20,
+        "candidate_mean_bins": 415.15,
+        "baseline_mean_bins": 420.35,
+        "mean_delta_bins": -5.2,
+        "median_delta_bins": -5,
+        "wins": 20,
+        "ties": 0,
+        "losses": 0,
+        "exact_sign_pvalue": 0.0000019073486328125,
+        "bootstrap_mean_delta_ci95": [
+          -5.95,
+          -4.4
+        ]
+      }
+    }
+  }
+}

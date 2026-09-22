@@ -1,0 +1,456 @@
+{
+  "dataset": {
+    "name": "OR-Library binpack1",
+    "source_url": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/binpack1.txt",
+    "instances": 20,
+    "split": {
+      "train": [
+        "u120_00",
+        "u120_01",
+        "u120_02",
+        "u120_03",
+        "u120_04",
+        "u120_05",
+        "u120_06",
+        "u120_07",
+        "u120_08",
+        "u120_09"
+      ],
+      "validation": [
+        "u120_10",
+        "u120_11",
+        "u120_12",
+        "u120_13",
+        "u120_14"
+      ],
+      "test": [
+        "u120_15",
+        "u120_16",
+        "u120_17",
+        "u120_18",
+        "u120_19"
+      ]
+    },
+    "external_generalization": {
+      "name": "OR-Library binpack2",
+      "source_url": "https://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/binpack2.txt",
+      "instances": 20,
+      "items_per_instance": 250
+    }
+  },
+  "selection_rule": "Search sees train only. Final expression is selected by validation fitness from the final train-ranked population. Test is evaluated once.",
+  "recorded_llm_metadata": {
+    "model": "GPT-5.6 Sol",
+    "notes": "Generation 1 proposed before results. Generation 2 conditioned only on generation-1 train/validation evidence: a 0.10-capacity threshold rule led training, while Best Fit remained validation-selected. Test was not used to construct generation 2.",
+    "generations": 2,
+    "proposals_per_generation": 24
+  },
+  "deterministic": {
+    "method": "deterministic",
+    "selected_expression": "tightness",
+    "candidate_budget": 48,
+    "archive_size": 53,
+    "train": {
+      "evaluation": {
+        "expression": "tightness",
+        "mean_bins": 51.1,
+        "mean_excess": 2.8,
+        "mean_excess_ratio": 0.05789633244602188,
+        "best_fit_wins": 0,
+        "best_fit_ties": 10,
+        "best_fit_losses": 0,
+        "complexity": 3,
+        "fitness": -0.05792633244602188,
+        "mean_reference_gap": 2.7
+      },
+      "paired_vs_best_fit": {
+        "n": 10,
+        "candidate_mean_bins": 51.1,
+        "baseline_mean_bins": 51.1,
+        "mean_delta_bins": 0,
+        "median_delta_bins": 0,
+        "wins": 0,
+        "ties": 10,
+        "losses": 0,
+        "exact_sign_pvalue": 1,
+        "bootstrap_mean_delta_ci95": [
+          0,
+          0
+        ]
+      }
+    },
+    "validation": {
+      "evaluation": {
+        "expression": "tightness",
+        "mean_bins": 52.2,
+        "mean_excess": 2.6,
+        "mean_excess_ratio": 0.05236499215070643,
+        "best_fit_wins": 0,
+        "best_fit_ties": 5,
+        "best_fit_losses": 0,
+        "complexity": 3,
+        "fitness": -0.052394992150706435,
+        "mean_reference_gap": 2.6
+      },
+      "paired_vs_best_fit": {
+        "n": 5,
+        "candidate_mean_bins": 52.2,
+        "baseline_mean_bins": 52.2,
+        "mean_delta_bins": 0,
+        "median_delta_bins": 0,
+        "wins": 0,
+        "ties": 5,
+        "losses": 0,
+        "exact_sign_pvalue": 1,
+        "bootstrap_mean_delta_ci95": [
+          0,
+          0
+        ]
+      }
+    },
+    "test": {
+      "evaluation": {
+        "expression": "tightness",
+        "mean_bins": 53.2,
+        "mean_excess": 3.2,
+        "mean_excess_ratio": 0.06399790685504972,
+        "best_fit_wins": 0,
+        "best_fit_ties": 5,
+        "best_fit_losses": 0,
+        "complexity": 3,
+        "fitness": -0.06402790685504972,
+        "mean_reference_gap": 3
+      },
+      "paired_vs_best_fit": {
+        "n": 5,
+        "candidate_mean_bins": 53.2,
+        "baseline_mean_bins": 53.2,
+        "mean_delta_bins": 0,
+        "median_delta_bins": 0,
+        "wins": 0,
+        "ties": 5,
+        "losses": 0,
+        "exact_sign_pvalue": 1,
+        "bootstrap_mean_delta_ci95": [
+          0,
+          0
+        ]
+      }
+    },
+    "external_binpack2": {
+      "evaluation": {
+        "expression": "tightness",
+        "mean_bins": 107.7,
+        "mean_excess": 6.15,
+        "mean_excess_ratio": 0.06056245720826779,
+        "best_fit_wins": 0,
+        "best_fit_ties": 20,
+        "best_fit_losses": 0,
+        "complexity": 3,
+        "fitness": -0.060592457208267794,
+        "mean_reference_gap": 6
+      },
+      "paired_vs_best_fit": {
+        "n": 20,
+        "candidate_mean_bins": 107.7,
+        "baseline_mean_bins": 107.7,
+        "mean_delta_bins": 0,
+        "median_delta_bins": 0,
+        "wins": 0,
+        "ties": 20,
+        "losses": 0,
+        "exact_sign_pvalue": 1,
+        "bootstrap_mean_delta_ci95": [
+          0,
+          0
+        ]
+      }
+    },
+    "top_validation_candidates": [
+      {
+        "expression": "tightness",
+        "mean_bins": 52.2,
+        "mean_excess": 2.6,
+        "mean_excess_ratio": 0.05236499215070643,
+        "best_fit_wins": 0,
+        "best_fit_ties": 5,
+        "best_fit_losses": 0,
+        "complexity": 3,
+        "fitness": -0.052394992150706435,
+        "mean_reference_gap": 2.6
+      },
+      {
+        "expression": "-residual",
+        "mean_bins": 52.2,
+        "mean_excess": 2.6,
+        "mean_excess_ratio": 0.05236499215070643,
+        "best_fit_wins": 0,
+        "best_fit_ties": 5,
+        "best_fit_losses": 0,
+        "complexity": 5,
+        "fitness": -0.052414992150706434,
+        "mean_reference_gap": 2.6
+      },
+      {
+        "expression": "-(residual ** 2)",
+        "mean_bins": 52.2,
+        "mean_excess": 2.6,
+        "mean_excess_ratio": 0.05236499215070643,
+        "best_fit_wins": 0,
+        "best_fit_ties": 5,
+        "best_fit_losses": 0,
+        "complexity": 8,
+        "fitness": -0.05244499215070643,
+        "mean_reference_gap": 2.6
+      },
+      {
+        "expression": "-abs(residual)",
+        "mean_bins": 52.2,
+        "mean_excess": 2.6,
+        "mean_excess_ratio": 0.05236499215070643,
+        "best_fit_wins": 0,
+        "best_fit_ties": 5,
+        "best_fit_losses": 0,
+        "complexity": 8,
+        "fitness": -0.05244499215070643,
+        "mean_reference_gap": 2.6
+      },
+      {
+        "expression": "tightness + 0.05 * fill_ratio",
+        "mean_bins": 52.2,
+        "mean_excess": 2.6,
+        "mean_excess_ratio": 0.05236499215070643,
+        "best_fit_wins": 0,
+        "best_fit_ties": 5,
+        "best_fit_losses": 0,
+        "complexity": 10,
+        "fitness": -0.052464992150706435,
+        "mean_reference_gap": 2.6
+      }
+    ],
+    "search_history": [
+      {
+        "generation": 0,
+        "archive_size": 8,
+        "best_expression": "tightness",
+        "best_fitness": -0.05792633244602188
+      },
+      {
+        "generation": 1,
+        "archive_size": 30,
+        "best_expression": "tightness",
+        "best_fitness": -0.05792633244602188
+      },
+      {
+        "generation": 2,
+        "archive_size": 53,
+        "best_expression": "tightness",
+        "best_fitness": -0.05792633244602188
+      }
+    ]
+  },
+  "recorded_llm": {
+    "method": "recorded_llm",
+    "selected_expression": "(2.0 + tightness) if residual < 0.25 * item else remaining / capacity",
+    "candidate_budget": 48,
+    "archive_size": 55,
+    "train": {
+      "evaluation": {
+        "expression": "(2.0 + tightness) if residual < 0.25 * item else remaining / capacity",
+        "mean_bins": 50.6,
+        "mean_excess": 2.3,
+        "mean_excess_ratio": 0.04778112984324164,
+        "best_fit_wins": 5,
+        "best_fit_ties": 4,
+        "best_fit_losses": 1,
+        "complexity": 22,
+        "fitness": -0.04800112984324164,
+        "mean_reference_gap": 2.2
+      },
+      "paired_vs_best_fit": {
+        "n": 10,
+        "candidate_mean_bins": 50.6,
+        "baseline_mean_bins": 51.1,
+        "mean_delta_bins": -0.5,
+        "median_delta_bins": -0.5,
+        "wins": 5,
+        "ties": 4,
+        "losses": 1,
+        "exact_sign_pvalue": 0.21875,
+        "bootstrap_mean_delta_ci95": [
+          -1,
+          0
+        ]
+      }
+    },
+    "validation": {
+      "evaluation": {
+        "expression": "(2.0 + tightness) if residual < 0.25 * item else remaining / capacity",
+        "mean_bins": 52,
+        "mean_excess": 2.4,
+        "mean_excess_ratio": 0.048685504971219255,
+        "best_fit_wins": 2,
+        "best_fit_ties": 2,
+        "best_fit_losses": 1,
+        "complexity": 22,
+        "fitness": -0.04890550497121925,
+        "mean_reference_gap": 2.4
+      },
+      "paired_vs_best_fit": {
+        "n": 5,
+        "candidate_mean_bins": 52,
+        "baseline_mean_bins": 52.2,
+        "mean_delta_bins": -0.2,
+        "median_delta_bins": 0,
+        "wins": 2,
+        "ties": 2,
+        "losses": 1,
+        "exact_sign_pvalue": 1,
+        "bootstrap_mean_delta_ci95": [
+          -0.8,
+          0.4
+        ]
+      }
+    },
+    "test": {
+      "evaluation": {
+        "expression": "(2.0 + tightness) if residual < 0.25 * item else remaining / capacity",
+        "mean_bins": 53.4,
+        "mean_excess": 3.4,
+        "mean_excess_ratio": 0.06760858189429618,
+        "best_fit_wins": 1,
+        "best_fit_ties": 2,
+        "best_fit_losses": 2,
+        "complexity": 22,
+        "fitness": -0.06782858189429618,
+        "mean_reference_gap": 3.2
+      },
+      "paired_vs_best_fit": {
+        "n": 5,
+        "candidate_mean_bins": 53.4,
+        "baseline_mean_bins": 53.2,
+        "mean_delta_bins": 0.2,
+        "median_delta_bins": 0,
+        "wins": 1,
+        "ties": 2,
+        "losses": 2,
+        "exact_sign_pvalue": 1,
+        "bootstrap_mean_delta_ci95": [
+          -0.4,
+          0.8
+        ]
+      }
+    },
+    "external_binpack2": {
+      "evaluation": {
+        "expression": "(2.0 + tightness) if residual < 0.25 * item else remaining / capacity",
+        "mean_bins": 106.7,
+        "mean_excess": 5.15,
+        "mean_excess_ratio": 0.05066102100802874,
+        "best_fit_wins": 15,
+        "best_fit_ties": 3,
+        "best_fit_losses": 2,
+        "complexity": 22,
+        "fitness": -0.050881021008028736,
+        "mean_reference_gap": 5
+      },
+      "paired_vs_best_fit": {
+        "n": 20,
+        "candidate_mean_bins": 106.7,
+        "baseline_mean_bins": 107.7,
+        "mean_delta_bins": -1,
+        "median_delta_bins": -1,
+        "wins": 15,
+        "ties": 3,
+        "losses": 2,
+        "exact_sign_pvalue": 0.002349853515625,
+        "bootstrap_mean_delta_ci95": [
+          -1.5,
+          -0.45
+        ]
+      }
+    },
+    "top_validation_candidates": [
+      {
+        "expression": "(2.0 + tightness) if residual < 0.25 * item else remaining / capacity",
+        "mean_bins": 52,
+        "mean_excess": 2.4,
+        "mean_excess_ratio": 0.048685504971219255,
+        "best_fit_wins": 2,
+        "best_fit_ties": 2,
+        "best_fit_losses": 1,
+        "complexity": 22,
+        "fitness": -0.04890550497121925,
+        "mean_reference_gap": 2.4
+      },
+      {
+        "expression": "(2.0 - residual / capacity) if residual < 0.05 * capacity else remaining / capacity",
+        "mean_bins": 52,
+        "mean_excess": 2.4,
+        "mean_excess_ratio": 0.048685504971219255,
+        "best_fit_wins": 2,
+        "best_fit_ties": 2,
+        "best_fit_losses": 1,
+        "complexity": 26,
+        "fitness": -0.04894550497121926,
+        "mean_reference_gap": 2.4
+      },
+      {
+        "expression": "tightness",
+        "mean_bins": 52.2,
+        "mean_excess": 2.6,
+        "mean_excess_ratio": 0.05236499215070643,
+        "best_fit_wins": 0,
+        "best_fit_ties": 5,
+        "best_fit_losses": 0,
+        "complexity": 3,
+        "fitness": -0.052394992150706435,
+        "mean_reference_gap": 2.6
+      },
+      {
+        "expression": "-residual",
+        "mean_bins": 52.2,
+        "mean_excess": 2.6,
+        "mean_excess_ratio": 0.05236499215070643,
+        "best_fit_wins": 0,
+        "best_fit_ties": 5,
+        "best_fit_losses": 0,
+        "complexity": 5,
+        "fitness": -0.052414992150706434,
+        "mean_reference_gap": 2.6
+      },
+      {
+        "expression": "-(residual ** 2)",
+        "mean_bins": 52.2,
+        "mean_excess": 2.6,
+        "mean_excess_ratio": 0.05236499215070643,
+        "best_fit_wins": 0,
+        "best_fit_ties": 5,
+        "best_fit_losses": 0,
+        "complexity": 8,
+        "fitness": -0.05244499215070643,
+        "mean_reference_gap": 2.6
+      }
+    ],
+    "search_history": [
+      {
+        "generation": 0,
+        "archive_size": 8,
+        "best_expression": "tightness",
+        "best_fitness": -0.05792633244602188
+      },
+      {
+        "generation": 1,
+        "archive_size": 32,
+        "best_expression": "(2.0 - residual / capacity) if residual < 0.10 * capacity else remaining / capacity",
+        "best_fitness": -0.05008194616977226
+      },
+      {
+        "generation": 2,
+        "archive_size": 55,
+        "best_expression": "(2.0 + tightness) if residual < 0.08 * capacity else residual / capacity",
+        "best_fitness": -0.0438769801833777
+      }
+    ]
+  }
+}
