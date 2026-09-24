@@ -1,4 +1,16 @@
-# LLM Mathematical Optimization Autoformulation
+# LLM for Mathematical Optimization
+
+<!-- portfolio-umbrella:start -->
+## Portfolio role
+
+This repository is the primary umbrella repository for this Jors Academy research area. Related projects have been consolidated under `projects/` so the methods, implementations, experiments, and case studies can be maintained and explored from one place.
+
+### Included projects
+
+- [`llm-guided-heuristic-discovery-bin-packing`](projects/llm-guided-heuristic-discovery-bin-packing/)
+
+Each consolidated project keeps its own files and a `SOURCE_REPOSITORY.md` provenance record. The snapshot preserves the source repository's default-branch files at consolidation time; repository-level history and metadata remain separate from the snapshot.
+<!-- portfolio-umbrella:end -->
 
 [![CI](https://github.com/jorsacademy/llm-mathematical-optimization-autoformulation/actions/workflows/ci.yml/badge.svg)](https://github.com/jorsacademy/llm-mathematical-optimization-autoformulation/actions/workflows/ci.yml)
 [![Python 3.11–3.12](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](https://www.python.org/)
