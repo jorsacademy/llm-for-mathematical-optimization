@@ -35,6 +35,9 @@ target-version = "py311"
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP"]
 
+[tool.ruff.lint.isort]
+known-first-party = ["llm_binpack"]
+
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
