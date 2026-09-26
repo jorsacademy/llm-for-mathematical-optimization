@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "llm-guided-binpack"
-version = "0.1.0"
+version = "0.2.0"
 description = "LLM-guided program search for interpretable online bin-packing heuristics"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -12,8 +12,11 @@ authors = [{ name = "JORS Academy" }]
 dependencies = []
 
 [project.optional-dependencies]
-openai = ["openai>=1.66.0"]
-dev = ["pytest>=8.0", "ruff>=0.6"]
+openai = ["openai>=1.66,<3"]
+dev = [
+  "pytest>=8,<10",
+  "ruff>=0.9,<1",
+]
 
 [project.scripts]
 llm-binpack = "llm_binpack.cli:main"
@@ -23,8 +26,15 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-q"
+addopts = "-ra --strict-config --strict-markers"
 
 [tool.ruff]
 line-length = 100
 target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
