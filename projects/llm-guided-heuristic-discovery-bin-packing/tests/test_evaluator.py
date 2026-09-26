@@ -23,6 +23,7 @@ def test_search_smoke() -> None:
         population_size=8,
         proposals_per_generation=8,
         seed=7,
+        candidate_timeout_seconds=5.0,
     )
 
     result = engine.run()
@@ -30,3 +31,7 @@ def test_search_smoke() -> None:
     assert result.best.expression
     assert len(result.history) == 3
     assert len(result.population) <= 8
+    assert result.candidate_evaluations > 0
+    assert result.candidate_timeouts == 0
+    assert result.primary_proposer_usage["provider"] == "deterministic"
+    assert result.primary_proposer_usage["calls"] == 2
