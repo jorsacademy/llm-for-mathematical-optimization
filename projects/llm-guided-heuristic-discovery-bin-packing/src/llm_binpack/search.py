@@ -10,7 +10,7 @@ from .benchmarks import BenchmarkCase
 from .evaluator import Evaluation
 from .expressions import UnsafeExpression
 from .proposers import DeterministicProposer, Elite, Proposer
-from .sandbox import SandboxEvaluationError, SandboxTimeout, evaluate_expression_isolated
+from .sandbox import (\n    SandboxEvaluationError,\n    SandboxTimeout,\n    evaluate_expression_isolated,\n)
 from .telemetry import ProposalBudgetExceeded
 
 
