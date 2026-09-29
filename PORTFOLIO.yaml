@@ -1,0 +1,13 @@
+schema_version: 1
+repository: llm-for-mathematical-optimization
+role: umbrella
+axis: methodology
+area: llm-mathematical-optimization
+status: active
+owner: jorsacademy
+projects:
+  - llm-guided-heuristic-discovery-bin-packing
+conventions:
+  provenance_records: true
+  reproducibility_expected: true
+  benchmark_assumptions_documented: true
