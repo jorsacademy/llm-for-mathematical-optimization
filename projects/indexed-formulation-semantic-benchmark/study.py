@@ -12,7 +12,7 @@ from scipy.optimize import milp,linprog,Bounds,LinearConstraint
 
 
 def unit(u):
-    if not isinstance(u,dict) or any(not isinstance(k,str) or type(v)!=int for k,v in u.items()):
+    if not isinstance(u,dict) or any(not isinstance(k,str) or type(v) is not int for k,v in u.items()):
         raise ValueError('Units are maps of base dimensions to integer exponents')
     return {k:v for k,v in u.items() if v}
 
@@ -51,7 +51,7 @@ def compile_spec(spec):
         if (not re.fullmatch(r'[A-Za-z_]\w*',name) or not labels or len(set(labels))!=len(labels)
             or any(not isinstance(v,str) or '|' in v for v in labels)):
             raise ValueError('Sets require unique string labels without |')
-    for name,p in params.items():
+    for _name,p in params.items():
         expected={'|'.join(i) for i in itertools.product(*(sets[a] for a in p['axes']))}
         if set(p['values'])!=expected or not all(np.isfinite(v) for v in p['values'].values()):
             raise ValueError('Parameter table does not match declared index domain')
