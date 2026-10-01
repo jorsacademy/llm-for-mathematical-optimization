@@ -7,6 +7,8 @@ status: active
 owner: jorsacademy
 projects:
   - llm-guided-heuristic-discovery-bin-packing
+  - indexed-formulation-semantic-benchmark
+  - solver-informed-policy-training
 conventions:
   provenance_records: true
   reproducibility_expected: true
