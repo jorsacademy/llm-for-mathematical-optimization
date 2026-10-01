@@ -1,1 +1,29 @@
-{"project":"solver_rl","status":"passed","tests":8,"environment":{"python":"3.13.5","numpy":"2.3.5","scipy":"1.17.0","torch":"2.10.0+cpu","device":"CPU","threads":1,"date":"2026-10-01"},"sha256":{"study.py":"0b26d8f985a2e238fec88432162f606f3f08f8f89d74ee4d03e265a90b3d2cdf","checks.py":"cbf26ac27c41feb856b420b102636e5ad1d16de018c79ad59a2a77ae21270ab7"},"scope":"tiny character GRU backend only; local Hugging Face adapter not executed; no large language model trained"}
+{
+  "project": "solver_rl",
+  "status": "passed",
+  "tests": 8,
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": "2.10.0+cpu",
+    "device": "CPU",
+    "threads": 1,
+    "date": "2026-10-01"
+  },
+  "sha256": {
+    "study.py": "acd41c6912c796423f37583ef64fbdb0a3d677d8c7b9ce0102378d274feb5821",
+    "checks.py": "58b2e025a4554e865437c26414787cbe24d6278402e158f17b5df5604f3224df"
+  },
+  "scope": "tiny character GRU backend only; local Hugging Face adapter not executed; no large language model trained",
+  "initial_execution_sha256": {
+    "study.py": "0b26d8f985a2e238fec88432162f606f3f08f8f89d74ee4d03e265a90b3d2cdf",
+    "checks.py": "cbf26ac27c41feb856b420b102636e5ad1d16de018c79ad59a2a77ae21270ab7"
+  },
+  "post_format_validation": {
+    "status": "passed",
+    "runner": "GitHub Actions",
+    "python": "3.11.16",
+    "ruff": "ruff 0.16.9"
+  }
+}
